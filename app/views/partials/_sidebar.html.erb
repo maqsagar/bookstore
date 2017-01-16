@@ -1,0 +1,22 @@
+<% if params[:controller] == 'about' %>
+	<div class="well">
+	<h3>Location info</h3>
+		<ul>
+			<li>Netcracker Online Services Pvt. Ltd.</li>
+			<li>#275/5, 15th Main, Sadashivnagar</li>
+			<li>Bangalore - 560 080</li>
+			<li>Phone: 080 6531-6321</li>
+			<li>Email: Info@knewcleus.com</li>
+		</ul>
+	</div>
+<% end %>
+
+<% if params[:controller] == 'books' && params[:action] == 'index' || params[:action] == 'show' %>
+<div class="list-group">
+
+  <a href="#" class="list-group-item">Ruby on Rails</a>
+  <a href="#" class="list-group-item">PHP</a>
+  <a href="#" class="list-group-item">HTML 5</a>
+
+</div>
+<% end %>
