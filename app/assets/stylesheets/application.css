@@ -48,11 +48,13 @@ footer
 
 }
 
-#books-index h5
+#books-index h3
 {
 	text-align: center;
-	height: 50px;
+	height: 30px;
+	font-size: 16px;
 }
+
 
 #books-index .btn
 {
@@ -60,3 +62,23 @@ footer
 	margin-top: 20px;
 }
 
+#books-show h2
+{
+	background:#f4f4f4;
+	padding: 10px;
+
+}
+.books-show-left
+{
+	float: left;
+	width: 40%;
+	padding-top: 20px;
+}
+.books-show-right
+{
+	float: left;
+	width: 60%;
+}
+
+#books-show .btn
+{margin: 20px 0 0 70px;}
