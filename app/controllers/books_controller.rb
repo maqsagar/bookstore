@@ -19,13 +19,23 @@ class BooksController < ApplicationController
   end
 
   def update
+    @book = Book.find(params[:id])
+    @book.update(book_params)
+    flash[:notice] = 'book added'
+    redirect_to books_path
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
 
-  def destroy
+  def destroy 
+    @book = Book.find(params[:id])
+    @book.destroy
+    flash[:notice] = "book deleted"
+    redirect_to books_path
   end
+
 
   def index
     @book = Book.all
