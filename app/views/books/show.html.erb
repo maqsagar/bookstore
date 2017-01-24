@@ -1,22 +1,22 @@
 <div id="books-show">
-<h2>What Can I give</h2>
+<h2><%= @book.title %></h2>
 <div class="books-show-left">
-	<%= image_tag('cover/1.jpg') %>
+	<%= image_tag(@book.coverpath) %>
 </div>
 <div class="books-show-right">
 <h3>What Can I give</h3>
 <ul>
-<li><strong>Category: </strong>Romance</li>
-<li><strong>Author: </strong>A.M.Khan</li>
-<li><strong>Publisher: </strong>Hiba Publication</li>
-<li><strong>Year </strong>2016</li>
-<li><strong>ISBN: </strong>00-343-343-32</li>
-<li><strong>Format: </strong>Paperback pages</li>
-<li><strong>Pages: </strong>365</li>
+<li><strong>Category: </strong><%= @book.category.name %></li>
+<li><strong>Author: </strong><%= @book.author.first_name + ' '+ @book.author.last_name %></li>
+<li><strong>Publisher: </strong><%= @book.publisher.name %></li>
+<li><strong>Year </strong><%= @book.year %></li>
+<li><strong>ISBN: </strong><%= @book.isbn %></li>
+<li><strong>Format: </strong><%= @book.format %></li>
+<li><strong>Pages: </strong><%= @book.pages %></li>
 </ul>
-<%= link_to "Buy for $3.54", 'http://knewcleus.com', class:'btn btn-success', target:'_blank' %>
+<%= link_to "Buy for $3.54", @book.buy, class:'btn btn-success', target:'_blank' %>
 </div>
 <div class="clearfix"></div>
 <h4>Excerpt:</h4>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p><%= @book.excerpt %></p>
 </div>

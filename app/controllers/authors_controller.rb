@@ -6,10 +6,17 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
-    @author.save
-
-    redirect_to authors_path
+    if
+      @author.save
+      flash[:notice] = "Author Created"
+        redirect_to authors_path
+    else
+      render 'new'
+    end
   end
+
+    
+
 
   def update
   end
